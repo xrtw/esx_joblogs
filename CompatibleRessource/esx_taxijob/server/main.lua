@@ -61,7 +61,8 @@ AddEventHandler('esx_taxijob:getStockItem', function(itemName, count)
 				xPlayer.addInventoryItem(itemName, count)
 				TriggerClientEvent('esx:showNotification', xPlayer.source, _U('have_withdrawn', count, item.label))
 				if Config.EnableJobLogs == true then
-				  TriggerEvent('esx_joblogs:AddInLog', "taxi", "getSharedInventoryTaxi", xPlayer.name, count, item.label)
+				  	TriggerEvent('esx_joblogs:AddInLog', "taxi", "getSharedInventoryTaxi", xPlayer.name, count, item.label)
+				end
 			end
 		else
 			TriggerClientEvent('esx:showNotification', xPlayer.source, _U('quantity_invalid'))
